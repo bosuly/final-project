@@ -1,1 +1,54 @@
 # final-project
+Key Components:
+GUI Design:
+
+The GUI uses components like JTextField, JSpinner, and JButton for user input and display.
+Buttons allow the user to input numbers (1, 2, etc.), clear fields (DEL), and perform actions like calculating totals or resetting inputs.
+Functionalities:
+
+Number Input:
+Buttons (0–9) append numbers to the cash text field when clicked, via the enter(String v) method.
+Delete (DEL):
+Deletes the last character entered in the cash field.
+Calculate Total:
+Multiplies quantities entered for menu items  by their respective prices.
+The results are summed up and displayed in the total field.
+Calculate Change:
+Determines if the cash entered is sufficient to cover the total.
+Displays the change if sufficient, otherwise shows "INVALID INPUT."
+Reset (Clear All):
+Resets all fields, spinners, and text fields to their default values.
+Main Method:
+Retrieves quantities from JSpinner components and calculates the total by multiplying each quantity by its price.
+Updates the total text field with the result.
+enterActionPerformed (Calculate Change):
+
+Compares the amount in cash to total:
+If cash >= total, calculates and displays the change.
+Otherwise, displays "INVALID INPUT."
+Components:
+Text Fields:
+
+cash: For entering the payment amount.
+total: Displays the total bill.
+change: Displays the calculated change.
+Spinners (JSpinner):
+
+Used to input quantities of different menu items (e.g., f, ra, o, p, a, let).
+Buttons:
+
+Number buttons (0–9) for entering payment.
+DEL: Deletes the last input in cash.
+ENTER: Processes the change calculation.
+Reset button clears all inputs.
+Pricing and Calculation Logic:
+Menu items have hardcoded prices:
+Fried = 50, Rice = 15, Orange = 15, Pasta = 30, Adobo = 70, Lettuce = 100.
+The total is calculated by multiplying quantities (from JSpinner) by their respective prices and summing them up.
+Execution Flow:
+User launches the application (resto).
+Inputs quantities for menu items via spinners.
+Clicks the "Place order" button to compute the total bill.
+Enters the payment amount using number buttons or the keyboard.
+Clicks "Enter" to calculate change or validate the input.
+If needed, clears inputs with the "Reset" button.
